@@ -28,7 +28,7 @@ Laravel >= 5.5 provides package auto-discovery, thanks to rasmuscnielsen and lui
 
 ```php
 'providers' => [
-    Prgayman\Zatca\Zatca::class,
+    Prgayman\Zatca\ZatcaServiceProvider::class,
 ]
 ```
 
@@ -36,9 +36,7 @@ Add the facade aliases in the same file:
 
 ```php
 'aliases' => [
-
   'Zatca' => Prgayman\Zatca\Facades\Zatca::class,
-
 ]
 ```
 
