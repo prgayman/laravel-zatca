@@ -47,7 +47,7 @@ Register the provider in your bootstrap app file `boostrap/app.php`
 Add the following line in the "Register Service Providers" section at the bottom of the file.
 
 ```php
-$app->register(Prgayman\Zatca\Zatca::class);
+$app->register(Prgayman\Zatca\ZatcaServiceProvider::class);
 ```
 
 For facades, add the following lines in the section "Create The Application" .
