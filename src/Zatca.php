@@ -167,6 +167,10 @@ class Zatca
             $qrCode = $qrCode->eye($qrCodeOptions->getEye());
         }
 
+        if (!is_null($qrCodeOptions->getErrorCorrection())) {
+            $qrCode = $qrCode->errorCorrection($qrCodeOptions->getErrorCorrection());
+        }
+
         return  $qrCode->generate($this->toBase64());
     }
 

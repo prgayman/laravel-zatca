@@ -65,6 +65,17 @@ class QrCodeOptions
     protected $eyeStyle = null;
 
     /**
+     * Holds the selected error correction.
+     * L: 7% loss.
+     * M: 15% loss.
+     * Q: 25% loss.
+     * H: 30% loss.
+     *
+     * @var string|null
+     */
+    protected $errorCorrection = null;
+
+    /**
      * Sets the size of the QrCode.
      *
      * @param int $pixels
@@ -168,6 +179,23 @@ class QrCodeOptions
     }
 
     /**
+     * Sets the error correction for the QrCode.
+     * L: 7% loss.
+     * M: 15% loss.
+     * Q: 25% loss.
+     * H: 30% loss.
+     *
+     * @param string $errorCorrection
+     * @return Generator
+     */
+    public function errorCorrection(string $errorCorrection): self
+    {
+        $this->errorCorrection = $errorCorrection;
+
+        return $this;
+    }
+
+    /**
      * Fetches the size.
      *   
      * @return int
@@ -245,5 +273,15 @@ class QrCodeOptions
     public function getEye()
     {
         return $this->eyeStyle;
+    }
+
+    /**
+     * Fetches the error correction.
+     * 
+     * @return string|null
+     */
+    public function getErrorCorrection()
+    {
+        return $this->errorCorrection;
     }
 }
